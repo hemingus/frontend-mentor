@@ -1,0 +1,96 @@
+.extensions-page {
+    --background-primary: #04091C;
+    --background-secondary: #0A1542;
+    --card-primary: #1F2535;
+    --text-primary: #FFFFFF;
+    --text-secondary: #BAC0D2;
+    --button-primary: #F35B55;
+    width: 100%;
+    background: linear-gradient(var(--background-primary), var(--background-secondary));
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.extensions-page[data-theme="dark"] {
+    --background-primary: #EBF2FC;
+    --background-secondary: #FFFFFF;
+    --card-primary: #FCFDFF;
+    --text-primary: #061136;
+    --text-secondary: #8F8F97;
+    --button-primary: #C4231E;
+    width: 100%;
+    background: linear-gradient(var(--background-primary), var(--background-secondary));
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.extensionsList-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    list-style: none;
+    margin: 2rem;
+    width: 90%;
+}
+
+.extensions-card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background: var(--card-primary);
+    border-radius: 1rem;
+    border: 1px solid var(--text-secondary);
+    padding: 1rem;
+}
+
+.extensionsHeader-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 0.5rem;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.extensionsHeader-button {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    background: var(--card-primary);
+    border: 1px solid var(--text-secondary);
+    border-radius: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.removeExtension-button {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    background: var(--card-primary);
+    border: 1px solid var(--text-secondary);
+    border-radius: 1.5rem;
+    color: var(--text-primary);
+}
