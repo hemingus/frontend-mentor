@@ -3,8 +3,10 @@ import '../pages/ExtensionsPage.css'
 const ExtensionsHeader = () => {
   return (
     <div className="extensionsHeader-container">
-        <h1>Extensions</h1>
-        <button>Theme</button>
+        <div className="flex-row-between extensionsHeader-content">            
+          <img src="./assets/images/logo.svg" alt="Extensions Icon"/>      
+          <button>Theme</button>
+        </div>
     </div>
   )
 }

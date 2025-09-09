@@ -9,8 +9,10 @@ const ExtensionsPage = () => {
 
     return (
     <div className="extensions-page">
-        <ExtensionsHeader/>;
-        <ExtensionsList data={dataTyped}/>;
+        <div className="extensions-page-content">
+            <ExtensionsHeader/>
+            <ExtensionsList data={dataTyped}/>
+        </div>
     </div>
     )
 }
