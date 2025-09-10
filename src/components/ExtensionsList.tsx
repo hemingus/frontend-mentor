@@ -3,13 +3,14 @@ import '../pages/ExtensionsPage.css'
 import ExtensionsCard from './ExtensionsCard'
 import { useState } from 'react'
 import type { Extension } from '../data/types'
+import { useLocalStorage } from '../hooks/useLocalStorage'
 
 interface ExtensionsListProps {
     data: Extension[];
 }
 
 const ExtensionsList = (data: ExtensionsListProps) => {
-  const [extensions, setExtensions] = useState<Extension[]>(data.data);
+  const [extensions, setExtensions] = useLocalStorage<Extension[]>({key: "extensions", defaultValue: data.data});
   const [activeFilter, setActiveFilter] = useState<"all" | "active" | "inactive">("all");
 
   function filterActive() {
