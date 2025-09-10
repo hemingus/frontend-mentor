@@ -91,18 +91,18 @@ button {
 }
 
 .extensionList-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    margin-bottom: 0.5rem;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .extensionList-header {
-        flex-direction: column;
-        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        gap: 0.5rem;
     }
 }
 
