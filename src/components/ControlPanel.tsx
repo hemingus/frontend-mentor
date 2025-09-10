@@ -5,7 +5,7 @@ import { useLocalStorage } from "../hooks/useLocalStorage"
 
 export default function ControlPanel() {
     const [text, setText] = useState("")
-    const [items, setItems] = useLocalStorage({key: "items"})
+    const [items, setItems] = useLocalStorage({key: "items", defaultValue: [] as string[]})
 
     function handleAddItem() {
         if (text.length > 0) {
