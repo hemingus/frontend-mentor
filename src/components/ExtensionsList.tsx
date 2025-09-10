@@ -36,7 +36,7 @@ const ExtensionsList = (data: ExtensionsListProps) => {
 
   return (
     <>
-    <header className="flex-row-between">
+    <header className="extensionList-header flex-row-between">
         <h1>Extensions List</h1>
         <div className="flex-row">
             <button 
