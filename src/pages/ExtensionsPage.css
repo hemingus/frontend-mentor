@@ -1,11 +1,11 @@
 .extensions-page {
-    --background-primary: #040918;
-    --background-secondary: #091540;
-    --card-primary: hsl(226, 25%, 17%);
-    --text-primary: #FFFFFF;
-    --text-secondary: #BAC0D2;
-    --button-primary: #F35B55;
-    --border--primary: hsl(0, 0%, 78%, 0.3);
+    --background-primary: #EBF2FC;
+    --background-secondary: #EEF8F9;
+    --card-primary: #FCFDFF;
+    --text-primary: #061136;
+    --text-secondary: #8F8F97;
+    --button-primary: #C4231E;
+    --border--primary: hsl(0, 0%, 0%, 0.2);
     width: 100%;
     min-height: 100svh;
     background: linear-gradient(var(--background-primary), var(--background-secondary));
@@ -23,12 +23,13 @@ button {
 }
 
 .extensions-page[data-theme="dark"] {
-    --background-primary: #EBF2FC;
-    --background-secondary: #EEF8F9;
-    --card-primary: #FCFDFF;
-    --text-primary: #061136;
-    --text-secondary: #8F8F97;
-    --button-primary: #C4231E;
+    --background-primary: #040918;
+    --background-secondary: #091540;
+    --card-primary: hsl(226, 25%, 17%);
+    --text-primary: #FFFFFF;
+    --text-secondary: #BAC0D2;
+    --button-primary: #F35B55;
+    --border--primary: hsl(0, 0%, 78%, 0.3);
     width: 100%;
     min-height: 100svh;
     background: linear-gradient(var(--background-primary), var(--background-secondary));
@@ -38,10 +39,6 @@ button {
     justify-content: center;
     align-items: center;
     font-family: 'Noto Sans', sans-serif;
-}
-
-.logo {
-    fill: var(--text-primary);
 }
 
 .extensions-page-content {
@@ -112,6 +109,10 @@ button {
     border: 1px solid var(--border--primary);
     border-radius: 1.5rem;
     color: var(--text-secondary);
+}
+
+.extensionsHeader-button.active {
+    background: var(--button-primary);
 }
 
 .removeExtension-button {

@@ -10,19 +10,23 @@ interface ExtensionsListProps {
 
 const ExtensionsList = (data: ExtensionsListProps) => {
   const [extensions, setExtensions] = useState<Extension[]>(data.data);
+  const [activeFilter, setActiveFilter] = useState<"all" | "active" | "inactive">("all");
 
   function filterActive() {
     const activeExtensions = data.data.filter(extension => extension.isActive);
     setExtensions(activeExtensions);
+    setActiveFilter("active");
   }
 
   function filterInactive() {
     const inactiveExtensions = data.data.filter(extension => !extension.isActive);
     setExtensions(inactiveExtensions);
+    setActiveFilter("inactive");
   }
 
   function showAll() {
     setExtensions(data.data);
+    setActiveFilter("all");
   }
 
   function removeExtension(name: string) {
@@ -32,20 +36,20 @@ const ExtensionsList = (data: ExtensionsListProps) => {
   return (
     <>
     <header className="flex-row-between">
-        <h2>Extensions</h2>
+        <h1>Extensions List</h1>
         <div className="flex-row">
             <button 
-              className="extensionsHeader-button"
+              className={`extensionsHeader-button ${activeFilter === "all" ? "active" : ""}`}
               onClick={showAll}>
                 All
             </button>
             <button 
-              className="extensionsHeader-button"
+              className={`extensionsHeader-button ${activeFilter === "active" ? "active" : ""}`}
               onClick={filterActive}>
                 Active
             </button>
             <button 
-              className="extensionsHeader-button"
+              className={`extensionsHeader-button ${activeFilter === "inactive" ? "active" : ""}`}
               onClick={filterInactive}>
                 Inactive
             </button>

@@ -5,7 +5,9 @@ const ExtensionsHeader = () => {
     <div className="extensionsHeader-container">
         <div className="flex-row-between extensionsHeader-content">            
           <img src="./assets/images/logo.svg" alt="Extensions Icon"/>      
-          <button>Theme</button>
+          <button>
+            <img src="./assets/images/icon-moon.svg"/>
+          </button>
         </div>
     </div>
   )
