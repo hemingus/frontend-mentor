@@ -1,4 +1,4 @@
-.extensions-page {
+.extensions-page[data-theme="light"] {
     --background-primary: #EBF2FC;
     --background-secondary: #EEF8F9;
     --card-primary: #FCFDFF;
@@ -17,11 +17,6 @@
     font-family: 'Noto Sans', sans-serif;
 }
 
-button {
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
 .extensions-page[data-theme="dark"] {
     --background-primary: #040918;
     --background-secondary: #091540;
@@ -36,9 +31,14 @@ button {
     color: var(--text-primary);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     font-family: 'Noto Sans', sans-serif;
+}
+
+button {
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .extensions-page-content {
@@ -164,8 +164,8 @@ button {
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 40px;
+    height: 20px;
 }
 
 /* Hide the native checkbox */
@@ -181,7 +181,7 @@ button {
     cursor: pointer;
     inset: 0;
     background-color: #ccc;
-    border-radius: 34px;
+    border-radius: 24px;
     transition: 0.4s;
 }
 
@@ -189,10 +189,10 @@ button {
 .slider::before {
     content: "";
     position: absolute;
-    height: 26px;
-    width: 26px;
+    height: 16px;
+    width: 16px;
     left: 4px;
-    bottom: 4px;
+    bottom: 2px;
     background-color: white;
     border-radius: 50%;
     transition: 0.4s;
@@ -204,5 +204,5 @@ input:checked + .slider {
 }
 
 input:checked + .slider::before {
-    transform: translateX(26px); /* slide knob to the right */
+    transform: translateX(16px); /* slide knob to the right */
 }

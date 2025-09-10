@@ -1,16 +1,26 @@
 import '../pages/ExtensionsPage.css'
 
-const ExtensionsHeader = () => {
+interface ExtensionsHeaderProps {
+  currentTheme: string;
+  toggleTheme: () => void;
+}
+
+
+
+export default function({currentTheme, toggleTheme}:ExtensionsHeaderProps) {
+  const iconSun = "./assets/images/icon-sun.svg"
+  const iconMoon = "./assets/images/icon-moon.svg"
+
   return (
     <div className="extensionsHeader-container">
         <div className="flex-row-between extensionsHeader-content">            
           <img src="./assets/images/logo.svg" alt="Extensions Icon"/>      
-          <button>
-            <img src="./assets/images/icon-moon.svg"/>
+          <button
+            className="theme-toggle-button"
+            onClick={toggleTheme}>
+            <img src={currentTheme === "light" ? iconSun : iconMoon}/>
           </button>
         </div>
     </div>
   )
 }
-
-export default ExtensionsHeader
