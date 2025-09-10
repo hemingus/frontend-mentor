@@ -5,6 +5,7 @@
     --text-primary: #061136;
     --text-secondary: #8F8F97;
     --button-primary: #C4231E;
+    --button-secondary: #acb0be;
     --border--primary: hsl(0, 0%, 0%, 0.2);
     width: 100%;
     min-height: 100svh;
@@ -24,6 +25,7 @@
     --text-primary: #FFFFFF;
     --text-secondary: #BAC0D2;
     --button-primary: #F35B55;
+    --button-secondary: #2C3E5D;
     --border--primary: hsl(0, 0%, 78%, 0.3);
     width: 100%;
     min-height: 100svh;
@@ -88,6 +90,28 @@ button {
     align-items: center;
 }
 
+.extensionList-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .extensionList-header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .flex-row {
     display: flex;
     flex-direction: row;
@@ -101,6 +125,18 @@ button {
     align-items: flex-start;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.theme-toggle-button {
+    font-size: 1.2rem;
+    padding: 0.5rem 0.5rem;
+    background: var(--button-secondary);
+    border: 1px solid var(--border--primary);
+    border-radius: 0.7rem;
+}
+
 .extensionsHeader-button {
     font-size: 1.2rem;
     padding: 0.5rem 1rem;
@@ -112,6 +148,8 @@ button {
 
 .extensionsHeader-button.active {
     background: var(--button-primary);
+    color: #061136;
+    font-weight: 700;
 }
 
 .removeExtension-button {

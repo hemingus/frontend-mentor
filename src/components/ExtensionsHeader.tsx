@@ -16,9 +16,9 @@ export default function({currentTheme, toggleTheme}:ExtensionsHeaderProps) {
         <div className="flex-row-between extensionsHeader-content">            
           <img src="./assets/images/logo.svg" alt="Extensions Icon"/>      
           <button
-            className="theme-toggle-button"
+            className="theme-toggle-button center-content"
             onClick={toggleTheme}>
-            <img src={currentTheme === "light" ? iconSun : iconMoon}/>
+            <img src={currentTheme === "light" ? iconMoon : iconSun}/>
           </button>
         </div>
     </div>
